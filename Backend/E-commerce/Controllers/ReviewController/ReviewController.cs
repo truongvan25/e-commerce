@@ -56,7 +56,7 @@ namespace E_commerce.Controllers.ReviewController
                 return result.StatusCode switch
                 {
                     404 => NotFound(result),
-                    403 => Forbid(),
+                    403 => StatusCode(403, result),
                     _ => BadRequest(result)
                 };
             }
@@ -87,7 +87,7 @@ namespace E_commerce.Controllers.ReviewController
                 return result.StatusCode switch
                 {
                     404 => NotFound(result),
-                    403 => Forbid(),
+                    403 => StatusCode(403, result),
                     _ => BadRequest(result)
                 };
             }
@@ -119,7 +119,7 @@ namespace E_commerce.Controllers.ReviewController
                 return result.StatusCode switch
                 {
                     404 => NotFound(result),
-                    403 => Forbid(),
+                    403 => StatusCode(403, result),
                     _ => BadRequest(result)
                 };
             }
